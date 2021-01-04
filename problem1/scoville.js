@@ -1,4 +1,4 @@
-class priortiyQueue {
+class priorityQueue {
 	constructor (arr, cmp) {
 		this.arr = arr;
 		this.cmp = cmp;
@@ -39,7 +39,7 @@ class priortiyQueue {
 
 const solution = (scoville, K) => {
 	let answer = 0;
-	let pq = new priortiyQueue(scoville, (a, b) => a - b > 0 ? true : false);
+	let pq = new priorityQueue(scoville, (a, b) => a - b > 0 ? true : false);
 
 	while (pq.length() > 1 && pq.top() < K) {
 		const a = pq.pop();
